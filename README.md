@@ -6,6 +6,7 @@ In this project, I aim to develop a Single Page Application (SPA) to explore new
 - **`React Router`**
 - **`Nested Routes`**
 - **`Styled Components`**
+- **`Supabase, tables, relationship between tables, security policies, connecting supabase to app`**
 - **`...`**
 
 ## 🚀 Getting Started
