@@ -15,8 +15,20 @@ export default function App() {
             <Heading as="h1">Wild Oasis App</Heading>
             <div>
               <Heading as="h2">Check in and out</Heading>
-              <Button onClick={() => alert('Check In')}>Check in</Button>
-              <Button onClick={() => alert('Check Out')}>Check out</Button>
+              <Button
+                variation="primary"
+                size="medium"
+                onClick={() => alert('Check In')}
+              >
+                Check in
+              </Button>
+              <Button
+                variation="secondary"
+                size="small"
+                onClick={() => alert('Check Out')}
+              >
+                Check out
+              </Button>
             </div>
           </Row>
           <Row type="vertical">
