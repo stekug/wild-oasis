@@ -7,6 +7,7 @@ In this project, I aim to develop a Single Page Application (SPA) to explore new
 - **`Nested Routes`**
 - **`Styled Components`**
 - **`Supabase, tables, relationship between tables, security policies, connecting supabase to app`**
+- **`Supabase image upload`**
 - **`React query`**
 - **`Mutations`**
 - **`React Hook Form`**
