@@ -1,25 +1,19 @@
+import { useForm } from 'react-hook-form';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import toast from 'react-hot-toast';
+import { createCabin } from '../../services/apiCabins';
 
 import Input from '../../ui/Input';
 import Form from '../../ui/Form';
 import Button from '../../ui/Button';
 import FileInput from '../../ui/FileInput';
 import Textarea from '../../ui/Textarea';
+import toast from 'react-hot-toast';
 import FormRow from '../../ui/FormRow';
 
-import { useForm } from 'react-hook-form';
-import { createCabin } from '../../services/apiCabins';
-
-function CreateCabinForm({ cabinToEdit = {} }) {
-  const { id: editId, ...editValues } = cabinToEdit;
-  const isEditSession = Boolean(editId);
-
-  const { register, handleSubmit, reset, getValues, formState } = useForm({
-    defaultValues: isEditSession ? editValues : {},
-  });
+function CreateCabinForm() {
+  const { register, handleSubmit, reset, getValues, formState } = useForm();
   const { errors } = formState;
-
+  console.log(errors);
   const queryClient = useQueryClient();
 
   const { mutate, isLoading: isCreating } = useMutation({
@@ -119,7 +113,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
           accept="image/*"
           // type="file"
           {...register('image', {
-            required: isEditSession ? false : 'This field is required',
+            required: 'This field is required',
           })}
         />
       </FormRow>
@@ -129,9 +123,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
         <Button variation="secondary" type="reset">
           Cancel
         </Button>
-        <Button disabled={isCreating}>
-          {isEditSession ? 'Edit cabin' : 'Create new cabin'}
-        </Button>
+        <Button disabled={isCreating}>Add cabin</Button>
       </FormRow>
     </Form>
   );
