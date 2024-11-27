@@ -107,18 +107,14 @@ function CreateCabinForm({ cabinToEdit = {} }) {
           {...register('discount', {
             required: 'This field is required',
             min: {
-              value: 1,
-              message: 'Price should be at least 1',
+              value: 0,
+              message: 'Discount can´t be negative',
             },
           })}
         />
       </FormRow>
 
-      <FormRow
-        label="Description "
-        disabled={isWorking}
-        error={errors?.description?.message}
-      >
+      <FormRow label="Description " error={errors?.description?.message}>
         <Textarea
           type="text"
           id="description"
