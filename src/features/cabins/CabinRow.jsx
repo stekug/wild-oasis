@@ -1,9 +1,7 @@
-import styled from 'styled-components';
 import { useState } from 'react';
 import { formatCurrency } from '../../utils/helpers';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { deleteCabin } from '../../services/apiCabins';
-import toast from 'react-hot-toast';
+import { useDeleteCabin } from './useDeleteCabin';
+import styled from 'styled-components';
 import CreateCabinForm from '../cabins/CreateCabinForm';
 
 const TableRow = styled.div`
@@ -46,6 +44,7 @@ const Discount = styled.div`
 `;
 
 export default function CabinRow({ cabin }) {
+  const { isDeleting, deleteCabin } = useDeleteCabin();
   const [showForm, setShowForm] = useState(false);
 
   const {
@@ -56,20 +55,6 @@ export default function CabinRow({ cabin }) {
     discount,
     image,
   } = cabin;
-
-  const queryClient = useQueryClient();
-
-  const { isLoading: isDeleting, mutate } = useMutation({
-    mutationFn: deleteCabin,
-    onSuccess: () => {
-      toast.success('Cabin successfully deleted');
-
-      queryClient.invalidateQueries({
-        queryKey: ['cabins'],
-      });
-    },
-    onError: (err) => toast.error(err.message),
-  });
 
   return (
     <>
@@ -85,7 +70,7 @@ export default function CabinRow({ cabin }) {
         )}
         <div>
           <button onClick={() => setShowForm((curr) => !curr)}>Edit</button>
-          <button onClick={() => mutate(cabinId)} disabled={isDeleting}>
+          <button onClick={() => deleteCabin(cabinId)} disabled={isDeleting}>
             Delete
           </button>
         </div>
