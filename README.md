@@ -1,4 +1,4 @@
-# 🌍 Wild Oasis
+# 🏘️ Wild Oasis
 
 In this project, I aim to develop a Single Page Application (SPA) to explore new technologies and revisit concepts I'm already familiar with, based on a react course.
 
@@ -11,6 +11,10 @@ In this project, I aim to develop a Single Page Application (SPA) to explore new
 - **`React query`**
 - **`Mutations`**
 - **`React Hook Form`**
+- **`Advanced ReactPatterns`**
+- - **`Render Props Pattern`**
+- - **`Compound Component Pattern`**
+- - **`Detecting click outside of a modal`**
 - **`...`**
 
 ## 🚀 Getting Started
