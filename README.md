@@ -15,6 +15,7 @@ In this project, I aim to develop a Single Page Application (SPA) to explore new
 - - **`Render Props Pattern`**
 - - **`Compound Component Pattern`**
 - - **`Detecting click outside of a modal`**
+- **`SearchParams`**
 - **`...`**
 
 ## 🚀 Getting Started
