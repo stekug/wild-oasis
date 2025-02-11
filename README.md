@@ -8,6 +8,7 @@ In this project, I aim to develop a Single Page Application (SPA) to explore new
 - **`Styled Components`**
 - **`Supabase, tables, relationship between tables, security policies, connecting supabase to app`**
 - **`Supabase image upload`**
+- **`Supabase user login`**
 - **`React query`**
 - **`Mutations`**
 - **`React Hook Form`**
@@ -16,6 +17,8 @@ In this project, I aim to develop a Single Page Application (SPA) to explore new
 - - **`Compound Component Pattern`**
 - - **`Detecting click outside of a modal`**
 - **`SearchParams`**
+- **`Recharts`**
+- **`Date-fns`**
 - **`...`**
 
 ## 🚀 Getting Started
