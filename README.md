@@ -18,7 +18,10 @@ In this project, I aim to develop a Single Page Application (SPA) to explore new
 - - **`Detecting click outside of a modal`**
 - **`SearchParams`**
 - **`Recharts`**
+- - **`Pie Chart`**
+- - **`Line Chart`**
 - **`Date-fns`**
+- **`React-Error-Boundary`**
 - **`...`**
 
 ## 🚀 Getting Started
